@@ -1,6 +1,6 @@
 <template>
     <div>
-        this is user
+      <p>this is user</p>
       <nuxt-link :to="{name:'index-user'}">goHome</nuxt-link>
       <nuxt-link :to="{name:'index-user-id', params: {id: 1}}">goOne</nuxt-link>
       <nuxt-link :to="{name:'index-user-id', params: {id: 2}}">goTwo</nuxt-link>
@@ -12,7 +12,12 @@
 
 <script>
     export default {
-        name: 'user'
+      name: 'user',
+      head() {
+        return {
+          title: '用户页面'
+        }
+      }
     }
 </script>
 

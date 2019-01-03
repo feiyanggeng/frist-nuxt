@@ -12,6 +12,11 @@
           id: ''
         }
       },
+      head() {
+        return {
+          title: `用户${this.id}`
+        }
+      },
       activated () {
         this.id = this.$route.params.id
       }

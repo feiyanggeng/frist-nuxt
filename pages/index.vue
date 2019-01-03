@@ -33,9 +33,14 @@ export default {
       value: ''
     }
   },
+  head() {
+    return {
+      title: 'nuxt 项目'
+    }
+  },
   methods: {
     changeHandle(val) {
-      alert(val)
+      this.$message.info(val)
     }
   }
 }
