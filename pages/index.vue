@@ -9,7 +9,7 @@
         My splendid Nuxt.js project
       </h2>
       <div class="links">
-        <el-select @change="changeHandle">
+        <el-select v-model="value" @change="changeHandle">
           <el-option value="0" label="A"></el-option>
           <el-option value="1" label="B"></el-option>
           <el-option value="2" label="C"></el-option>
@@ -27,6 +27,11 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  data() {
+    return {
+      value: ''
+    }
   },
   methods: {
     changeHandle(val) {
